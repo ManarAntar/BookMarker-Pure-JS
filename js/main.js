@@ -7,7 +7,6 @@ var siteList = [];
 if (localStorage.getItem("mySites") != null) {
     siteList = JSON.parse(localStorage.getItem('mySites'));
     display(siteList);
-
 } else {
     var siteList = [];
 }
@@ -27,14 +26,12 @@ addBtn.onclick = function () {
             };
             siteList.push(site);
         }
-    
         localStorage.setItem('mySites', JSON.stringify(siteList));
         display(siteList);
         clearForm();
     }else {
         alert("Book Name is invalid");
     }
-   
 }
 
 function clearForm() {
@@ -60,7 +57,6 @@ function deleteSite(index) {
     siteList.splice(index, 1);
     localStorage.setItem('mySites', JSON.stringify(siteList));
     display(siteList);
-
 }
 
 function nameValid() {
@@ -73,14 +69,7 @@ function nameValid() {
         return false;
     }
 }
-// function urlValid(){
-//     var regex= /^[https://www.][a-z]{3,9}[.com]$/;
-//     if(regex.test(siteUrlInput.value)==true){
-//         siteUrlInput.classList.replace("is-invalid","is-valid")
-//     }else{
-//         siteUrlInput.classList.add("is-invalid");
-//     }
-// }
+
 function search(searchItem) {
     var searchResult = [];
     for (i = 0; i < siteList.length; i++) {
