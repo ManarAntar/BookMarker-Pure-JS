@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>Boomark</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="container my-5">
+        <h3 class="my-4 bookhead">Bookmarker</h3>
+        <hr>
+        <div class="bookform text-center text-black mt-1 mb-3 py-3">
+            <h4 class="text-center my-1">Bookmark your favorite sites</h4>
+            <div class=" my-4">
+                <label for="siteNameInput" class="fw-bold m-3">Site Name</label>
+                <input id="siteNameInput" oninput="nameValid()" placeholder="Bookmark Name" class="w-75 form-control mx-auto" Required>
+            </div>
+            <div class=" my-4">
+                <label for="siteUrlInput" class="fw-bold m-3">URL</label>
+                <input id="siteUrlInput" placeholder="Website URL" class="w-75 form-control mx-auto" Required>
+            </div>
+            <button class="btn btn-primary d-block mx-auto" id="addBtn">Submit</button>
+        </div>
+        <input type="search" oninput="search(this.value)" class="form-control my-5 w-75 mx-auto " name="" id="searchInput" placeholder="Search By Book Mark Name">
+        <div class="output mb-5 w-75 mx-auto ">
+            <table class="table py-4">
+                <tbody id="tableBody">
+                </tbody>
+            </table>
+        </div>
+        <hr>
+        <p class="foot fw-bold"> © 2022 Bookmarker Inc.</p>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
